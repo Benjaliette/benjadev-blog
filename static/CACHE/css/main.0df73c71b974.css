@@ -1,0 +1,7 @@
+/* line 1, static/style/main.scss */
+body {
+  margin: 0; }
+  /* line 4, static/style/main.scss */
+  body h1 {
+    color: red;
+    font-size: 10px; }

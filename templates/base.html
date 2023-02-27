@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App title</title>
+    {% load compress %}
+
+    {% compress css %}
+        <link type="text/x-scss" href="{% static 'style/main.scss' %}" rel="stylesheet" media="screen">
+    {% endcompress %}
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+    <script src="{% static 'javascript/index.js' %}"></script>
+  </body>
+</html>
