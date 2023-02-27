@@ -19,6 +19,9 @@ DATABASES = {
     }
 }
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 SHARE_URL = "http://127.0.0.1:8000"
 
 # Static assets
