@@ -1,9 +1,33 @@
 $red: #D33F49;
 $orange: #F09253;
-$blue: #1a93c7;
+$blue: #579BCB;
+$pink: #EBB0B0;
 $yellow: #ffe54c;
 $green: #086a1c;
 $gray: #333333;
 $light-gray: #dfdede;
 $super-light-gray: #F4F4F4;
 $off-white: #fbfbfb;
+
+.gradient-custom-3 {
+  /* fallback for old browsers */
+  background: #84fab0;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
+}
+
+.gradient-custom {
+  background: $blue;
+  background: -webkit-linear-gradient(to right, rgba(87, 155, 203, 1), rgba(235, 176, 176, 1));
+  background: linear-gradient(to right, rgba(87, 155, 203, 1), rgba(235, 176, 176, 1));
+}
+
+.gradient-custom-05 {
+  background: $blue;
+  background: -webkit-linear-gradient(to right, rgba(87, 155, 203, 0.5), rgba(235, 176, 176, 0.5));
+  background: linear-gradient(to right, rgba(87, 155, 203, 0.5), rgba(235, 176, 176, 0.5));
+}

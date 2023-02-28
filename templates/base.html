@@ -1,13 +1,17 @@
 {% load static %}
+{% load bootstrap5 %}
+{% load fontawesome_6 %}
 <!DOCTYPE html>
 <html>
   <head>
     <title>App title</title>
     {% load compress %}
-
     {% compress css %}
         <link type="text/x-scss" href="{% static 'style/main.scss' %}" rel="stylesheet" media="screen">
     {% endcompress %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% fontawesome_6_static %}
   </head>
   <body>
     {% block content %}{% endblock %}

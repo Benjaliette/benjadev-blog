@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,400&display=swap");
+/* line 1, static/style/config/_sizes.scss */
+h1 {
+  font-size: 24px; }
+
+/* line 3, static/style/config/_fonts.scss */
+* {
+  font-family: 'Roboto', sans-serif; }
+
+/* line 12, static/style/config/_colors.scss */
+.gradient-custom-3 {
+  /* fallback for old browsers */
+  background: #84fab0;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5)); }
+
+/* line 23, static/style/config/_colors.scss */
+.gradient-custom {
+  background: #579BCB;
+  background: -webkit-linear-gradient(to right, #579bcb, #ebb0b0);
+  background: linear-gradient(to right, #579bcb, #ebb0b0); }
+
+/* line 29, static/style/config/_colors.scss */
+.gradient-custom-05 {
+  background: #579BCB;
+  background: -webkit-linear-gradient(to right, rgba(87, 155, 203, 0.5), rgba(235, 176, 176, 0.5));
+  background: linear-gradient(to right, rgba(87, 155, 203, 0.5), rgba(235, 176, 176, 0.5)); }
+
+/* line 35, static/style/config/_colors.scss */
+.btn-outline-variant {
+  border: 1px solid linear-gradient(to right, #579bcb, #ebb0b0); }
+
+/* line 5, static/style/main.scss */
+body {
+  margin: 0; }

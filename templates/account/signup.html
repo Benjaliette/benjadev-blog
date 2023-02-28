@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+{% load static %}
+{% load bootstrap5 %}
+{% load fontawesome_6 %}
+
+{% block head_title %} Sign up {% endblock %}
+
+{% block content %}
+
+{% include "./registration_form.html" with log_type="Sign up" %}
+
+{% endblock %}

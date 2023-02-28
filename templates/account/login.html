@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head_title %} Sign in {% endblock %}
+
+{% block content %}
+
+{% include "./registration_form.html" with log_type="Sign in" %}
+
+{% endblock %}

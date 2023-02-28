@@ -31,6 +31,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'compressor',
+    'bootstrap5',
+    'fontawesome_6',
 ]
 
 MIDDLEWARE = [
@@ -86,19 +88,18 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-SITE_ID = 1
+SITE_ID = 2
 
 # Provider specific settings
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
-        # For each OAuth based provider, either add a ``SocialApp``
-        # (``socialaccount`` app) containing the required client
-        # credentials, or list them here:
-        # 'APP': {
-        #     'client_id': '123',
-        #     'secret': '456',
-        #     'key': ''
-        # }
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
     }
 }
 

@@ -1,0 +1,65 @@
+{% load bootstrap5 %}
+{% load fontawesome_6 %}
+{% load account socialaccount %}
+{% load static %}
+
+<section class="vh-100 bg-image"
+  style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-05">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <img class="mb-4 rounded mx-auto d-block" src="{% static '/images/logo.png' %}" alt="" width="75" height="75">
+              <h2 class="text-uppercase text-center mb-5">Welcome</h2>
+
+              <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+                {% csrf_token %}
+                {% bootstrap_form form show_label='skip' %}
+                {% bootstrap_form_errors form %}
+
+                <div class="d-grid gap-2 col-6 mx-auto">
+                  {% buttons %}
+                    <button type="submit" class="btn btn-outline-light w-100 gradient-custom">
+                      {{ log_type }}
+                    </button>
+                    <a
+                      class="btn btn-outline-secondary w-100 mt-2 d-flex justify-content-around align-items-center"
+                      href="{% provider_login_url 'google' %}"
+                      role="button"
+                    >
+                      {% fa6_icon 'google' 'fab' %}
+                      <span>{{ log_type }} with Google</span>
+                    </a>
+                  {% endbuttons %}
+                </div>
+              </form>
+
+              {% if log_type == "Sign up" %}
+
+                <p class="text-center text-muted mt-5 mb-0">
+                  Already have an account?
+                  <a href="{% url 'account_login' %}" class="fw-bold text-body">
+                    <u>Login here</u>
+                  </a>
+                </p>
+
+              {% else %}
+
+                <p class="text-center text-muted mt-5 mb-0">
+                  Don't have an account?
+                  <a href="{% url 'account_signup' %}" class="fw-bold text-body">
+                    <u>Sign up here</u>
+                  </a>
+                </p>
+
+              {% endif %}
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
