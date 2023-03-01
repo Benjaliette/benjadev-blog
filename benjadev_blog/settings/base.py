@@ -19,6 +19,7 @@ SECRET_KEY = env('DJANGO_SECRET_KEY')
 
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
+    'posts.apps.PostsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

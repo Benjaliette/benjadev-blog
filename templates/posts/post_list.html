@@ -1,0 +1,15 @@
+{% extends 'shared/base.html' %}
+
+{% block content %}
+
+  {% include 'shared/navbar.html' %}
+
+  <h1>Liste des articles</h1>
+
+  <ul>
+    {% for post in object_list %}
+        <li>{{ post.title }}</li>
+    {% endfor %}
+  </ul>
+
+{% endblock  %}
