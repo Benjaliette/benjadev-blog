@@ -1,0 +1,26 @@
+{% extends "shared/base.html" %}
+
+{% block content %}
+  {% include "shared/navbar.html" %}
+  <div class="container">
+    <h1>Home page</h1>
+
+    {% if user.is_authenticated %}
+      <p>Welcome, {{user.username}}</p>
+      <a href="http://127.0.0.1:8000/accounts/logout/">Logout</a>
+    {% else %}
+      <p>Please <a href="http://127.0.0.1:8000/accounts/login/">Login</a></p>
+    {% endif %}
+
+    <p>
+      {% lorem 9 p random %}
+    </p>
+    <p>
+      {% lorem 9 p random %}
+    </p>
+    <p>
+      {% lorem 9 p random %}
+    </p>
+  </div>
+
+{% endblock %}

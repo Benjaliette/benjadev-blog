@@ -1,6 +1,10 @@
+// Import configuration styles
 @import "config/sizes";
 @import "config/fonts";
 @import "config/colors";
+
+// Import components style
+@import "components/navbar";
 
 body {
   margin: 0;

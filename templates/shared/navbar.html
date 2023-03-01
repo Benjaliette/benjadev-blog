@@ -1,0 +1,42 @@
+{% load static %}
+{% load fontawesome_6 %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light-blue sticky-top border-bottom border-secondary">
+  <div class="container">
+    <a class="navbar-brand" href="{ url 'pages:home' }">
+      <img src="{% static 'images/logo.png' %}" class="rounded" alt="logo" width="50" height="50">
+    </a>
+    <div class="order-lg-last flex-grow-1 flex-lg-grow-0 text-end">
+      {% if user.is_authenticated %}
+        <button class="btn btn-dark px-4" data-bs-toggle="dropdown" aria-expanded="false">
+          {% fa6_icon 'user' 'fa' %}
+        </button>
+        <ul class="dropdown-menu">
+          <h5 class="dropdown-item">Welcome {{ user.username }}</h5>
+          <li><a class="dropdown-item" href="{% url 'account_logout' %}">Disconnect</a></li>
+        </ul>
+      {% else %}
+        <a class="btn btn-dark px-4" href="{% url 'account_login' %}" role="button">Log In</a>
+      {% endif %}
+    </div>
+    <button class="navbar-toggler ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-light" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Benjadev Blog</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item px-3">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

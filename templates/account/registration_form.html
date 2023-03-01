@@ -11,7 +11,9 @@
         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
           <div class="card" style="border-radius: 15px;">
             <div class="card-body p-5">
-              <img class="mb-4 rounded mx-auto d-block" src="{% static '/images/logo.png' %}" alt="" width="75" height="75">
+              <a href="{% url 'pages:home' %}">
+                <img class="mb-4 rounded mx-auto d-block" src="{% static '/images/logo.png' %}" alt="logo" width="75" height="75">
+              </a>
               <h2 class="text-uppercase text-center mb-5">Welcome</h2>
 
               <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
