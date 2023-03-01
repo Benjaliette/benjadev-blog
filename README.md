@@ -1,3 +1,3 @@
-# django-start-template
+# Benjadev Blog 📜
 
 👷‍♂️ WORK IN PROGRESS
