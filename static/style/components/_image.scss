@@ -1,0 +1,10 @@
+.img-container {
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid black;
+  img {
+    width: 100%;
+    clip-path: inset(0 0 auto 0);
+  }
+}

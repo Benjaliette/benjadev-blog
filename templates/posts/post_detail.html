@@ -1,0 +1,16 @@
+{% extends 'shared/base.html' %}
+{% load cloudinary %}
+
+{% block content %}
+  {% include 'shared/navbar.html' %}
+
+  <div class="img-container">
+    {% cloudinary object.cover %}
+  </div>
+
+  <div class="container mt-5">
+    <a href="{% url 'posts:index' %}"><< Go bask to article list</a>
+    <h1>{{ object.title }}</h1>
+    <p>{{ object.content }}</p>
+  </div>
+{% endblock %}

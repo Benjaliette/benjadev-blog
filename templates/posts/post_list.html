@@ -4,12 +4,20 @@
 
   {% include 'shared/navbar.html' %}
 
-  <h1>Liste des articles</h1>
+  <div class="container mt-5">
+    <h1>Liste des articles</h1>
 
-  <ul>
-    {% for post in object_list %}
-        <li>{{ post.title }}</li>
-    {% endfor %}
-  </ul>
+    <ul>
+      {% for post in object_list %}
+          <li>
+            <h5>{{ post.title }}</h5>
+            <a href="{% url 'posts:show' post.id %}">
+              Go to article
+            </a>
+          </li>
+      {% endfor %}
+      <a href="{% url 'posts:new' %}">Write a post</a>
+    </ul>
+  </div>
 
 {% endblock  %}

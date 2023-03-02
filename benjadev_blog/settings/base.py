@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'compressor',
     'bootstrap5',
     'fontawesome_6',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -134,3 +135,16 @@ STATICFILES_FINDERS = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Setting Cloudinary configurations
+import cloudinary
+
+cloudinary.config(
+    cloud_name = env('CLOUDINARY_CLOUD_NAME'),
+    api_key = env('CLOUDINARY_API_KEY'),
+    api_secret = env('CLOUDINARY_API_SECRET'),
+    secure = True
+)
+
+import cloudinary.uploader
+import cloudinary.api
