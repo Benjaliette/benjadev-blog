@@ -14,9 +14,15 @@
               <a href="{% url 'pages:home' %}">
                 <img class="mb-4 rounded mx-auto d-block" src="{% static '/images/logo.png' %}" alt="logo" width="75" height="75">
               </a>
-              <h2 class="text-uppercase text-center mb-5">Welcome</h2>
 
-              <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+              {% if is_login %}
+                <h2 class="text-center mb-5">Please log in</h2>
+                <form class="signup" id="login_form" method="post" action="{% url 'account_login' %}">
+                  {% else %}
+                <h2 class="text-center mb-5">Welcome</h2>
+                <form class="signup" id="signup_form" method="post" action="{% url 'account_login' %}">
+              {% endif %}
+
                 {% csrf_token %}
                 {% bootstrap_form form show_label='skip' %}
                 {% bootstrap_form_errors form %}
