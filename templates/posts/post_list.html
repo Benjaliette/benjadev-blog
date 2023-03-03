@@ -1,4 +1,5 @@
 {% extends 'shared/base.html' %}
+{% load cloudinary %}
 
 {% block content %}
 
@@ -7,17 +8,28 @@
   <div class="container mt-5">
     <h1>Liste des articles</h1>
 
-    <ul>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
       {% for post in object_list %}
-          <li>
-            <h5>{{ post.title }}</h5>
-            <a href="{% url 'posts:show' post.id %}">
-              Go to article
-            </a>
-          </li>
+        <div class="col">
+          <a href="{% url 'posts:show' post.id %}">
+            <div class="card h-100">
+              <div class="h-50 overflow-hidden">
+                <img src="{{ post.cover.url }}" class="card-img-top" alt="post cover image">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">{{ post.title }}</h5>
+                <p class="card-text">
+                  {{ post.content|safe|truncatechars:100 }}
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated {{ post.updated_at }}</small>
+              </div>
+            </div>
+          </a>
+        </div>
       {% endfor %}
-      <a href="{% url 'posts:new' %}">Write a post</a>
-    </ul>
+    </div>
   </div>
 
 {% endblock  %}
