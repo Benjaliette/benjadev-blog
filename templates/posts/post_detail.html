@@ -11,7 +11,7 @@
   <div class="container mt-5">
     <a href="{% url 'posts:index' %}"><< Go bask to article list</a>
     <h1>{{ object.title }}</h1>
-    <p>{{ object.content }}</p>
+    {{ object.content|safe }}
     <a href="{% url 'posts:update' object.id %}">Update the article</a>
     <a href="{% url 'posts:delete' object.id %}">Delete the article</a>
   </div>
