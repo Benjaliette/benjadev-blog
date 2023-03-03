@@ -11,7 +11,7 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
       {% for post in object_list %}
         <div class="col">
-          <a href="{% url 'posts:show' post.id %}">
+          <a href="{% url 'posts:show' post.id %}" class="post-link">
             <div class="card h-100">
               <div class="h-50 overflow-hidden">
                 <img src="{{ post.cover.url }}" class="card-img-top" alt="post cover image">

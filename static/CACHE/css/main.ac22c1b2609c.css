@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,400;0,600;0,700;0,800;1,400&display=swap");
+/* line 1, static/style/config/_sizes.scss */
+h1 {
+  font-size: 24px; }
+
+/* line 3, static/style/config/_fonts.scss */
+* {
+  font-family: 'Noto Sans', sans-serif; }
+
+/* line 13, static/style/config/_colors.scss */
+.gradient-custom-3 {
+  /* fallback for old browsers */
+  background: #84fab0;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5)); }
+
+/* line 24, static/style/config/_colors.scss */
+.gradient-custom {
+  background: #579BCB;
+  background: -webkit-linear-gradient(to right, #579bcb, #ebb0b0);
+  background: linear-gradient(to right, #579bcb, #ebb0b0); }
+
+/* line 30, static/style/config/_colors.scss */
+.gradient-custom-05 {
+  background: #579BCB;
+  background: -webkit-linear-gradient(to right, rgba(87, 155, 203, 0.5), rgba(235, 176, 176, 0.5));
+  background: linear-gradient(to right, rgba(87, 155, 203, 0.5), rgba(235, 176, 176, 0.5)); }
+
+/* line 1, static/style/components/_card.scss */
+.post-link {
+  color: inherit !important; }
+
+/* line 1, static/style/components/_image.scss */
+.img-container {
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid black; }
+  /* line 6, static/style/components/_image.scss */
+  .img-container img {
+    width: 100%;
+    clip-path: inset(0 0 auto 0); }
+
+/* line 1, static/style/components/_navbar.scss */
+.bg-light-blue {
+  background-color: #e3f4ff; }
+
+/* line 9, static/style/main.scss */
+body {
+  margin: 0; }
+
+/* line 13, static/style/main.scss */
+a {
+  text-decoration: inherit !important; }

@@ -8,13 +8,15 @@
     </a>
     <div class="order-lg-last flex-grow-1 flex-lg-grow-0 text-end">
       {% if user.is_authenticated %}
-        <button class="btn btn-dark px-4" data-bs-toggle="dropdown" aria-expanded="false">
-          {% fa6_icon 'user' 'fa' %}
-        </button>
-        <ul class="dropdown-menu">
-          <h5 class="dropdown-item">Welcome {{ user.username }}</h5>
-          <li><a class="dropdown-item" href="{% url 'account_logout' %}">Disconnect</a></li>
-        </ul>
+        <div class="btn-group">
+          <button class="btn btn-dark px-4 rounded" data-bs-toggle="dropdown" aria-expanded="false">
+            {% fa6_icon 'user' 'fa' %}
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end mt-2">
+            <h5 class="dropdown-item">Bienvenue {{ user.username }}</h5>
+            <li><a class="dropdown-item" href="{% url 'account_logout' %}">Déconnecter</a></li>
+          </ul>
+        </div>
       {% else %}
         <a class="btn btn-dark px-4" href="{% url 'account_login' %}" role="button">Log In</a>
       {% endif %}
@@ -30,10 +32,10 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item px-3">
-            <a class="nav-link active" aria-current="page" href="{% url 'pages:home' %}">Home</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'pages:home' %}">Accueil</a>
           </li>
           <li class="nav-item px-3">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="{% url 'posts:index' %}">Articles</a>
           </li>
         </ul>
       </div>
